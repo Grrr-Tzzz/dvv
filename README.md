@@ -28,6 +28,8 @@ you can also override the default value of save-csv, plot, rm and skip in config
 ## Config.yaml
 This is an example config that resembles the format of that paper. The program will make a folder called "CCF_ASDF" under its directory to store the Xcorrelation data. It saves the final result in "network_dvv.csv"
 
+You can find detailed settings in "paper setup.pdf"
+
 # network_dvv.csv
 This is the file that contains the computed dv/v.
 
