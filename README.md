@@ -1,3 +1,5 @@
+This is my first time using github and writing something formal, so please bear with me.
+
 # Environment
 
 In case you cannot run this code, try to import this environment I used:
