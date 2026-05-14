@@ -1,0 +1,184 @@
+# ====================
+# OS setting
+# ====================
+
+# Base working directory
+path: "./"
+
+# Output folder name
+folder_name: "CCF_ASDF"
+
+# Whether to remove old outputs before running
+do_rm: false
+
+# Whether to skip existing files/results
+do_skip: true
+
+# Output figure path
+out_fig: "./network_dvv.png"
+
+# Output CSV path
+out_csv: "./network_dvv.csv"
+
+# Runtime options
+save_csv: true
+plot_result: true
+
+
+# ====================
+# T1 setting
+# ====================
+
+# Time range
+start_date: "2019-01-01"
+end_date: "2020-01-01"
+
+# Basic correlation parameters
+inc_hours: 24
+sampling_rate: 20
+cc_len: 1800
+step: 1800
+substack: true
+
+# Component / correlation mode
+ncomp: 3
+acorr_only: false
+xcorr_only: true
+
+# Geographic range
+lamin: 31
+lamax: 42
+lomin: -124
+lomax: -115
+
+# Network and stations
+networks:
+  - CI
+
+stations:
+  - LJR
+  - DLA
+  - LAF
+  - STS
+  - RINB
+
+# Larger station list, if needed later:
+# stations:
+#   - LSS
+#   - KML
+#   - SDD
+#   - CWP
+#   - RKMP
+#   - STG
+#   - ELS
+#   - LMH
+#   - LMS
+#   - PLS
+#   - SRN
+#   - FMP
+#   - RPV
+#   - STS
+#   - DLA
+#   - BRE
+#   - CHL
+#   - MLS
+#   - CHN
+#   - SSS
+#   - RVR
+#   - RSB
+#   - CLT
+#   - IPT
+#   - SS2
+#   - CJM
+#   - LPC
+#   - BFS
+#   - SUN
+#   - PDU
+#   - PSR
+#   - RIO
+#   - WLT
+#   - OLI
+#   - TCC
+#   - RUS
+#   - PEM
+#   - XTL
+#   - CFL
+#   - MWC
+#   - GOU
+#   - JPLS
+#   - WTT
+#   - LGB
+#   - USC
+#   - LTP
+#   - LAF
+#   - PDR
+#   - LCG
+#   - BHP
+#   - SMF
+#   - SPF
+#   - WSS
+#   - BLC
+#   - OAT
+#   - LFP
+#   - RINB
+#   - HLL
+#   - DEC
+
+channels:
+  - "BH?"
+  - "HH?"
+
+# Instrument response
+stationxml: false
+rm_resp: "INV"
+
+# Frequency range
+freqmin: 0.008
+freqmax: 7.0
+max_over_std: 10
+
+# Normalization
+freq_norm: "RMA"
+smoothspect_N: 10
+time_norm: "ONE_BIT"
+smooth_N: 10
+
+# Correlation and stacking methods
+cc_method: "XCORR"
+stack_method: "LINEAR"
+
+# Substack / lag settings
+substack_windows: 1
+maxlag: 60
+
+
+# ====================
+# T2 setting
+# ====================
+
+# The used component
+comp: "ZZ"
+
+# Stack length in days, the paper uses 21
+stack_length_days: 21
+
+# Step length in days, the paper uses 1
+step_days: 1
+
+
+dvv:
+  # Frequency band
+  freq: [1.25, 5.0]
+
+  # Coda Time Window
+  coda: [15.0, 42.0]
+
+  # Length of moving window
+  moving_window_length: 2.0
+
+  # Length of moving step
+  moving_window_step: 0.25
+
+  # Stack reference
+  # "mean" or integer index
+  reference: "mean"
