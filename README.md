@@ -14,10 +14,10 @@ I tested this environment on BlueHive and it worked.
 
 python ./compute_dvv.py \
   --config THE_CONFIG_FILE.yaml \
-  --no-save-csv \ if you do not want to save the result into csv
-  --plot \ if you want to save the plot as png
-  --rm \ whether to delete the last result
-  --skip \ whether to skip the correlation. Usually use this when the correlation result is already saved.
+  --no-save-csv \ if you do not want to save the result into csv \
+  --plot \ if you want to save the plot as png \
+  --rm \ whether to delete the last result \
+  --skip \ whether to skip the correlation. Usually use this when the correlation result is already saved. 
 
 you can also override the default value of save-csv, plot, rm and skip in config.yaml.
 
