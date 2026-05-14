@@ -7,6 +7,7 @@ In case you cannot run this code, try to import this environment I used:
 environment.yml
 
 by "conda env create -f environment.yml", you may want to change the name of this env, for it is very strange.
+I tested this environment on BlueHive and it worked.
 
 # Compute_dvv
 ## Usage
