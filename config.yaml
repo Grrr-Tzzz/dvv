@@ -17,6 +17,7 @@ folder_name: "CCF_ASDF"
 do_rm: false
 
 # Whether to skip existing files/results
+# This is useful when resuming a job/Xcorrelation is already computed
 do_skip: false
 
 # Output figure path
