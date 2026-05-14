@@ -29,6 +29,17 @@ out_csv: "./network_dvv.csv"
 save_csv: true
 plot_result: true
 
+# ====================
+# S3 setting
+# ====================
+
+s3_storage_options:
+  s3:
+    anon: true
+
+s3_data: "s3://scedc-pds/continuous_waveforms/"
+
+s3_station_xml_root: "s3://scedc-pds/FDSNstationXML/"
 
 # ====================
 # T1 setting
