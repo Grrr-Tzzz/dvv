@@ -24,4 +24,4 @@ python ./compute_dvv.py \
 you can also override the default value of save-csv, plot, rm and skip in config.yaml.
 
 ## Config.yaml
-This is an example config that resembles the format of that paper. The program will make a folder called "CCF_ASDF" under its directory to store the Xcorrelation data. It saves the final result in network_dvv.csv
+This is an example config that resembles the format of that paper. The program will make a folder called "CCF_ASDF" under its directory to store the Xcorrelation data. It saves the final result in "network_dvv.csv"
