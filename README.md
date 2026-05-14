@@ -1,3 +1,5 @@
+![result](./results/result.png)
+
 This is my first time using github and writing something formal, so please bear with me.
 
 # Environment
