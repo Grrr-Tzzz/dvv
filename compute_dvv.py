@@ -646,9 +646,35 @@ def main():
 
 
     # S3 paths for raw data and stationXML
-    S3_STORAGE_OPTIONS = {"s3": {"anon": True}} # S3 storage options
-    S3_DATA = "s3://scedc-pds/continuous_waveforms/" # Continuous waveform data
-    S3_STATION_XML = "s3://scedc-pds/FDSNstationXML/CI/"    # StationXML files for CI network
+    # S3_STORAGE_OPTIONS = {"s3": {"anon": True}} # S3 storage options
+    # S3_DATA = "s3://scedc-pds/continuous_waveforms/" # Continuous waveform data
+    # S3_STATION_XML = "s3://scedc-pds/FDSNstationXML/CI/"    # StationXML files for CI network
+
+
+    S3_STORAGE_OPTIONS = raw.get("s3_storage_options", {"s3": {"anon": True}})
+    S3_DATA = raw.get(
+        "s3_data",
+        "s3://scedc-pds/continuous_waveforms/"
+    )
+    S3_STATION_XML_ROOT = raw.get(
+        "s3_station_xml_root",
+        "s3://scedc-pds/FDSNstationXML/"
+    )
+    
+    networks = raw["networks"]
+    if len(networks) != 1:
+        raise ValueError(
+            "This script currently expects exactly one network for station XML, "
+            f"but got {networks}"
+        )
+    network = networks[0]
+    
+    S3_STATION_XML = S3_STATION_XML_ROOT.rstrip("/") + f"/{network}/"
+
+
+
+
+    
     # S3 data store
     timerange = DateTimeRange(config.start_date, config.end_date)
     catalog = XMLStationChannelCatalog(S3_STATION_XML, storage_options=S3_STORAGE_OPTIONS) # Station catalog
