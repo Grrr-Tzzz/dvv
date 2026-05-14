@@ -50,6 +50,16 @@ s3_station_xml_root: "s3://scedc-pds/FDSNstationXML/"
 start_date: "2019-01-01"
 end_date: "2020-01-01"
 
+# The used component
+comp: "ZZ"
+
+# Stack length in days, the paper uses 21
+stack_length_days: 21
+
+# Step length in days, the paper uses 1
+step_days: 1
+
+
 # Basic correlation parameters
 inc_hours: 24
 sampling_rate: 20
@@ -177,16 +187,6 @@ maxlag: 60
 # ====================
 # T2 setting
 # ====================
-
-# The used component
-comp: "ZZ"
-
-# Stack length in days, the paper uses 21
-stack_length_days: 21
-
-# Step length in days, the paper uses 1
-step_days: 1
-
 
 dvv:
   # Frequency band
