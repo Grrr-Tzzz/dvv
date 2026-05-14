@@ -11,7 +11,7 @@ environment.yml
 by "conda env create -f environment.yml", you may want to change the name of this env, for it is very strange.
 I tested this environment on BlueHive and it worked.
 
-# Compute_dvv
+# compute_dvv.py
 This is the program that will compute and save dvv into a csv file according to the given input. 
 
 ## Usage
@@ -32,3 +32,6 @@ This is an example config that resembles the format of that paper. The program w
 This is the file that contains the computed dv/v.
 
 The structure is: Date, dvv, error, npairs
+
+# InterPair.ipynb
+This is the prototype of the wrapped program compute_dvv.py. If the code is doing anything wrong, it is useful for debuging.
