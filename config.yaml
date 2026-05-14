@@ -69,6 +69,10 @@ lomin: -124
 lomax: -115
 
 # Network and stations
+# Currently it only supports one network
+# so please keep only one network
+# If you want to use other network, remember
+# to change the geographic range above.
 networks:
   - CI
 
