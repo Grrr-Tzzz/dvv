@@ -1,3 +1,8 @@
+# This is an example config file
+# It will compute a the dataset from 2019 01 01 to 2020 01 01
+# All parameters specified in the paper can be found here.
+
+
 # ====================
 # OS setting
 # ====================
@@ -12,7 +17,7 @@ folder_name: "CCF_ASDF"
 do_rm: false
 
 # Whether to skip existing files/results
-do_skip: true
+do_skip: false
 
 # Output figure path
 out_fig: "./network_dvv.png"
@@ -42,6 +47,7 @@ substack: true
 
 # Component / correlation mode
 ncomp: 3
+# Keep these settings if do inter-staional correlation
 acorr_only: false
 xcorr_only: true
 
